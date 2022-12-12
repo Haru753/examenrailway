@@ -125,7 +125,7 @@ public function fnEliminar2($id){
 
    public function fnSeguimiento (){
     //$xAlumnos=Estudiante1::all();
-    $xAlumnos=Seguimiento::paginate(4);
+    $xAlumnos=Seguimiento::paginate(3);
     return view('pagSeguimiento',compact('xAlumnos'));
    }
 
