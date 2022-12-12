@@ -27,6 +27,23 @@ Route::put('/actualizar/{id}', [PagesController::class, 'fnUpdate'])->name('Estu
 
 Route::delete('/eliminar/{id}', [PagesController::class, 'fnEliminar'])->name('Estudiante.xEliminar');
 
+
+
+
+
+Route::post('/', [PagesController::class, 'fnRegistrar2'])->name('Estudiante.xRegistrar2');
+
+Route::get('/Seguimiento', [PagesController::class, 'fnSeguimiento'])->name('xSeguimiento');
+Route::get('/detalle/{id}', [PagesController::class, 'fnEstDetalle2'])->name('Seguimiento.xDetalle');
+
+Route::get('/actualizar/{id}', [PagesController::class, 'fnEstActualizar2'])->name('Seguimiento.xActualizar');
+Route::put('/actualizar/{id}', [PagesController::class, 'fnUpdate2'])->name('Seguimiento.xUpdate');
+
+Route::delete('/eliminar/{id}', [PagesController::class, 'fnEliminar2'])->name('Seguimiento.xEliminar');
+
+
+
+
 Route::get('/galeria/{numero?}', [PagesController::class, 'fnGaleria']) ->where('numero', '[0-9]+')-> name('xGaleria');
     
 
